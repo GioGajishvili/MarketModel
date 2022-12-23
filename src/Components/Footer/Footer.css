@@ -1,0 +1,42 @@
+.footer {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer-top {
+  width: 100%;
+  padding: 30px 300px;
+
+  background-color: #e7eafa;
+}
+
+.headset-icon {
+  margin: 12px 0px 0px 14px;
+}
+
+.userfooter-icon {
+  margin: 13px 0px 0px 14px;
+}
+
+.discount-icon {
+  margin: 14px 0px 0px 14px;
+}
+
+.footer-bot {
+  width: 100%;
+  height: 600px;
+  background-color: black;
+  height: 500px;
+}
+
+.bot-footer-main {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 0px 200px 0px 150px;
+  margin-top: 40px;
+}
