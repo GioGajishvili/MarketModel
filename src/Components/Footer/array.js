@@ -1,5 +1,6 @@
 export const ArrayForLinks = [
   {
+    id: 1,
     title: "Information",
     value: [
       "About Us",
@@ -14,6 +15,7 @@ export const ArrayForLinks = [
     ],
   },
   {
+    id: 2,
     title: "PC Parts",
     value: [
       "CPUS",
@@ -29,6 +31,7 @@ export const ArrayForLinks = [
     ],
   },
   {
+    id: 3,
     title: "Desktop PCs",
     value: [
       "Custom PCs",
@@ -40,6 +43,7 @@ export const ArrayForLinks = [
     ],
   },
   {
+    id: 4,
     title: "Laptops",
     value: [
       "Evryday Use Notebooks",
@@ -51,6 +55,7 @@ export const ArrayForLinks = [
     ],
   },
   {
+    id: 5,
     title: "Address",
     value: [
       "Address: 1234 Street Adress",

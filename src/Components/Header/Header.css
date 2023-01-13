@@ -84,11 +84,7 @@
 }
 
 #first-filter {
-  margin-left: 30px;
-}
-
-.header-filters:hover {
-  color: rgb(9, 255, 0);
+  margin-left: 50px;
 }
 
 .header-filters {
@@ -100,6 +96,10 @@
   font-size: 14px;
   text-decoration: none;
   color: black;
+}
+
+a.header-filters:hover {
+  color: rgb(9, 255, 0);
 }
 
 .search-icon-test {

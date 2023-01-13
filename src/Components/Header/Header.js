@@ -6,6 +6,7 @@ import Facebook from "../../Icons/Facebook.png";
 import Instagram from "../../Icons/Instagram.png";
 import VapeLogo from "../../Icons/VapeLogo.webp";
 import { CiShoppingCart, CiSearch, CiUser } from "react-icons/ci";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -33,15 +34,24 @@ function Header() {
       <div className="routing-container">
         <div className="main-header d-flex align-items-center">
           <img className="vape-logo" src={VapeLogo} />
-          <a className="header-filters" id="first-filter">
-            {" "}
-            Laptops{" "}
-          </a>
-          <a className="header-filters"> Desktop PCs </a>
-          <a className="header-filters"> Networking Devices </a>
-          <a className="header-filters"> Printers & Scanners</a>
-          <a className="header-filters"> PC Parts </a>
-          <a className="header-filters"> Repairs </a>
+          <Link to="/" className="header-filters" id="first-filter">
+            Home
+          </Link>
+          <Link to="/Laptops" className="header-filters">
+            Laptops
+          </Link>
+          <Link to="/DesktopPcs" className="header-filters">
+            Desktop PCs
+          </Link>
+          <Link to="/NetworkingDevices" className="header-filters">
+            Networking Devices
+          </Link>
+          <Link to="/PrintersScanners" className="header-filters">
+            Printers & Scanners
+          </Link>
+          <Link to="/PCParts" className="header-filters">
+            PC Parts
+          </Link>
           <SearchBar />
           <CiShoppingCart className="cart-icon" />
           <CiUser className="user-icon" />

@@ -8,8 +8,10 @@ const SearchBar = () => {
   const handleClick = (e) => {
     e.preventDefault();
     setIsActive(!isActive);
-    console.log(searchLog);
-    setSearchLog("");
+    if (searchLog.length) {
+      console.log(searchLog);
+      setSearchLog("");
+    }
   };
   const createLog = (e) => {
     e.preventDefault();

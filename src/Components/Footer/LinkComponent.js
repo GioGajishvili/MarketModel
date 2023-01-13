@@ -5,9 +5,9 @@ const WrapperComponent = () => {
   return (
     <div className="link-container">
       {ArrayForLinks.map((item) => {
-        const { title, value } = item;
+        const { title, value, id } = item;
         return (
-          <div className="link-container" key={new Date().getTime().toString()}>
+          <div className="link-container" key={id}>
             <div className="child-div">
               <h2 className="link-titles">{title}</h2>
               {value.map((item, index) => (
