@@ -7,7 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./Pages/HomePage/HomePage";
 import Laptops from "./Pages/Laptops/Laptops";
 import DesktopPcs from "./Pages/DesktopPCs/DesktopPcs";
-import NetworkingDevices from "./Pages/NetworkingDevices.js/NetworkingDevices";
+import NetworkingDevices from "./Pages/NetworkingDevices/NetworkingDevices";
 import PrintersScanners from "./Pages/PrinterSScanners/PrintersScanners";
 import PCParts from "./Pages/PCParts/PCParts";
 
