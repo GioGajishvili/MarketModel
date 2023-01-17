@@ -1,0 +1,35 @@
+.login-component {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 520px;
+  height: 420px;
+  background-color: #e7eafa;
+  border-radius: 50px;
+}
+
+.form-login {
+  display: flex;
+  align-items: left;
+  justify-content: space-evenly;
+  flex-direction: column;
+  font-family: Jura;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.login-button {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-top: 50px;
+}
+
+.password-link {
+  margin-left: 2px;
+  font-family: Jura;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  color: rgb(80, 80, 80);
+}

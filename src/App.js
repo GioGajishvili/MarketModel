@@ -10,6 +10,7 @@ import DesktopPcs from "./Pages/DesktopPCs/DesktopPcs";
 import NetworkingDevices from "./Pages/NetworkingDevices/NetworkingDevices";
 import PrintersScanners from "./Pages/PrinterSScanners/PrintersScanners";
 import PCParts from "./Pages/PCParts/PCParts";
+import Auth from "./Pages/Auth/Auth";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="Auth" element={<Auth />} />
           <Route path="/Laptops" element={<Laptops />} />
           <Route path="/DesktopPCs" element={<DesktopPcs />} />
           <Route path="/NetworkingDevices" element={<NetworkingDevices />} />
