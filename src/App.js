@@ -8,7 +8,7 @@ import HomePage from "./Pages/HomePage/HomePage";
 import Laptops from "./Pages/Laptops/Laptops";
 import DesktopPcs from "./Pages/DesktopPCs/DesktopPcs";
 import NetworkingDevices from "./Pages/NetworkingDevices/NetworkingDevices";
-import PrintersScanners from "./Pages/PrinterSScanners/PrintersScanners";
+import AboutUs from "./Pages/AboutUs/AboutUs";
 import PCParts from "./Pages/PCParts/PCParts";
 import Auth from "./Pages/Auth/Auth";
 
@@ -23,7 +23,7 @@ function App() {
           <Route path="/Laptops" element={<Laptops />} />
           <Route path="/DesktopPCs" element={<DesktopPcs />} />
           <Route path="/NetworkingDevices" element={<NetworkingDevices />} />
-          <Route path="/PrintersScanners" element={<PrintersScanners />} />
+          <Route path="/AboutUs" element={<AboutUs />} />
           <Route path="/PCParts" element={<PCParts />} />
         </Routes>
         <Footer />

@@ -2,13 +2,15 @@ import React from "react";
 import "./Header.css";
 import SearchBar from "./SearchBar";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Facebook from "../../Icons/Facebook.png";
-import Instagram from "../../Icons/Instagram.png";
-import VapeLogo from "../../Icons/VapeLogo.webp";
+import Facebook from "../../assets/Icons/Facebook.png";
+import Instagram from "../../assets/Icons/Instagram.png";
+import VapeLogo from "../../assets/Icons/VapeLogo.webp";
 import { CiShoppingCart, CiSearch, CiUser } from "react-icons/ci";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Header() {
+  const navigate = useNavigate();
+
   return (
     <div className="header">
       <div className="black-line">
@@ -37,6 +39,9 @@ function Header() {
           <Link to="/" className="header-filters" id="first-filter">
             Home
           </Link>
+          <Link to="/AboutUs" className="header-filters">
+            About Us
+          </Link>
           <Link to="/Laptops" className="header-filters">
             Laptops
           </Link>
@@ -46,15 +51,22 @@ function Header() {
           <Link to="/NetworkingDevices" className="header-filters">
             Networking Devices
           </Link>
-          <Link to="/PrintersScanners" className="header-filters">
-            Printers & Scanners
-          </Link>
           <Link to="/PCParts" className="header-filters">
             PC Parts
           </Link>
           <SearchBar />
           <CiShoppingCart className="cart-icon" />
-          <CiUser className="user-icon" />
+          <button
+            style={{
+              border: "none",
+              width: "fit-content",
+              borderRadius: "50px",
+              backgroundColor: "transparent",
+            }}
+            onClick={() => navigate("/Auth")}
+          >
+            <CiUser className="user-icon" />
+          </button>
         </div>
       </div>
     </div>

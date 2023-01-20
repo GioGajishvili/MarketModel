@@ -4,7 +4,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { TbHeadset, TbUser, TbDiscount } from "react-icons/tb";
 import TopFooterComponent from "./TopFooterComponent";
 import EmailFooterComponent from "./EmailFooterComponent";
-import LinkComponent from "./LinkComponent";
 
 function Footer() {
   return (

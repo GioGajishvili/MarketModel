@@ -10,20 +10,20 @@ const Login = () => {
     <div className="login-component">
       <form className="form-login" onSubmit={handleSubmit}>
         <h2
-          style={{ marginBottom: "4px", fontSize: "26px", fontWeight: "bold" }}
+          style={{ marginBottom: "4px", fontSize: "30px", fontWeight: "bold" }}
         >
           Registered Costumers
         </h2>
-        <p className="password-link">
-          If you have an account, sign in with your email address
-        </p>
-        <lable style={{ margin: "10px 0px 0px 4px", fontWeight: "bold" }}>
+        <lable style={{ margin: "20px 0px 0px 4px", fontWeight: "bold" }}>
           Email
         </lable>
         <input
+          className="input"
           style={{
             margin: "10px 0px 10px 0px",
-            paddingLeft: "10px",
+            padding: "14px",
+            borderRadius: "10px",
+            border: "none",
           }}
           placeholder="Your E-mail"
         ></input>
@@ -31,9 +31,13 @@ const Login = () => {
           Password
         </lable>
         <input
+          className="input"
+          type="password"
           style={{
             marginTop: "10px",
-            paddingLeft: "10px",
+            padding: "14px",
+            borderRadius: "10px",
+            border: "none",
           }}
           placeholder="Your Password"
         ></input>
@@ -47,12 +51,16 @@ const Login = () => {
               color: "white",
               fontSize: "18px",
               fontWeight: "bold",
+              border: "none",
             }}
             type="submit"
           >
             Sign In
           </button>
-          <Link style={{ marginLeft: "30px", textDecoration: "none" }}>
+          <Link
+            className="reset-password-link"
+            style={{ marginLeft: "30px", textDecoration: "none" }}
+          >
             Forgot Your Password ?
           </Link>
         </div>

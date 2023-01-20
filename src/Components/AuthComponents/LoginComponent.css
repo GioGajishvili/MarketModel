@@ -22,14 +22,19 @@
   display: flex;
   align-items: center;
   justify-content: left;
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
-.password-link {
-  margin-left: 2px;
-  font-family: Jura;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  color: rgb(80, 80, 80);
+.input:focus {
+  background-color: rgb(246, 248, 255);
+  transition: 1s;
+}
+
+.reset-password-link {
+  color: black;
+}
+
+.reset-password-link:hover {
+  transition: 1s;
+  color: rgb(56, 91, 187);
 }
