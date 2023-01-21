@@ -4,7 +4,7 @@ import SearchBar from "./SearchBar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Facebook from "../../assets/Icons/Facebook.png";
 import Instagram from "../../assets/Icons/Instagram.png";
-import VapeLogo from "../../assets/Icons/VapeLogo.webp";
+import LogoForHeader from "../../assets/Icons/LogoForHeader.png";
 import { CiShoppingCart, CiSearch, CiUser } from "react-icons/ci";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -35,7 +35,7 @@ function Header() {
       </div>
       <div className="routing-container">
         <div className="main-header d-flex align-items-center">
-          <img className="vape-logo" src={VapeLogo} />
+          <img className="logo-for-header" src={LogoForHeader} />
           <Link to="/" className="header-filters" id="first-filter">
             Home
           </Link>
@@ -55,7 +55,7 @@ function Header() {
             PC Parts
           </Link>
           <SearchBar />
-          <CiShoppingCart className="cart-icon" />
+          <CiShoppingCart className="cart-icon cart-icon-global" />
           <button
             style={{
               border: "none",

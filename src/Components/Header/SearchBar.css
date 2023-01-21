@@ -1,6 +1,9 @@
 .search-bar-container {
+  margin-top: 8px;
+
   width: 250px;
-  margin-left: 120px;
+
+  margin-left: 170px;
   display: flex;
   align-items: center;
   justify-content: flex-end;

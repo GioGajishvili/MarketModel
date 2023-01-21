@@ -4,6 +4,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { TbHeadset, TbUser, TbDiscount } from "react-icons/tb";
 import TopFooterComponent from "./TopFooterComponent";
 import EmailFooterComponent from "./EmailFooterComponent";
+import Facebook from "../../assets/Icons/FacebookFooter.png";
+import Instagram from "../../assets/Icons/InstagramFooter.png";
+import Paypal from "../../assets/Icons/Paypal.png";
+import PaypalText from "../../assets/Icons/PaypalText.png";
 
 function Footer() {
   return (
@@ -37,6 +41,16 @@ function Footer() {
         button={"Subscribe"}
         linktitle={""}
       />
+      <div className="footer-botter-component">
+        <div>
+          <a href="https://www.facebook.com" target="_blank">
+            <img className="facebook-logo-footer" src={Facebook} />
+          </a>
+          <a href="https://www.instagram.com" target="_blank">
+            <img className="instagram-logo-footer" src={Instagram} />
+          </a>
+        </div>
+      </div>
     </div>
   );
 }
