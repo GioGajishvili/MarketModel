@@ -33,7 +33,7 @@ export const ArrayForLinks = [
       "Custom PCs",
       "Servers",
       "MSI All-In-One PCs",
-      "HP/Compaq PCs",
+      "HP / Compaq PCs",
       "ASUS PCs",
       "Tecs PCs",
     ],
@@ -55,7 +55,7 @@ export const ArrayForLinks = [
     title: "Address",
     value: [
       "Address: 1234 Street Adress",
-      "Phones: (00) 1234 5678",
+      "Phones: (+995) 551 37 07 37",
       "Open Hours :",
       "Monday: 9:00 AM - 5:30 PM",
       "Thursday: 9:00 AM - 5:30 PM",

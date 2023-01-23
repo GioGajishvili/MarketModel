@@ -42,11 +42,13 @@
 }
 
 .footer-botter-component {
-  /* background-color: red; */
   height: 40px;
   width: 68%;
   margin: 74px 32px 0px 0px;
   border-top: solid 1px white;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 
 .facebook-logo-footer {
@@ -55,4 +57,12 @@
 
 .instagram-logo-footer {
   margin: 12px 10px 0px 0px;
+}
+
+.copyright-text {
+  font-family: Jura;
+  font-style: normal;
+  font-weight: bolder;
+  font-size: 14px;
+  color: white;
 }

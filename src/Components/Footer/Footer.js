@@ -6,8 +6,6 @@ import TopFooterComponent from "./TopFooterComponent";
 import EmailFooterComponent from "./EmailFooterComponent";
 import Facebook from "../../assets/Icons/FacebookFooter.png";
 import Instagram from "../../assets/Icons/InstagramFooter.png";
-import Paypal from "../../assets/Icons/Paypal.png";
-import PaypalText from "../../assets/Icons/PaypalText.png";
 
 function Footer() {
   return (
@@ -49,6 +47,14 @@ function Footer() {
           <a href="https://www.instagram.com" target="_blank">
             <img className="instagram-logo-footer" src={Instagram} />
           </a>
+        </div>
+        <div
+          style={{
+            marginLeft: "76%",
+            marginTop: "10px",
+          }}
+        >
+          <p className="copyright-text">Copyright © 2023 Shop Pty. Ltd.</p>
         </div>
       </div>
     </div>
