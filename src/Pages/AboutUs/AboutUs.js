@@ -6,6 +6,7 @@ import PhotoKeyword from "../../assets/images/Keyword.png";
 import PhotoWhitePc from "../../assets/images/WhitePc.png";
 import PhotoFuturePc from "../../assets/images/FuturePc.png";
 import PhotoPcPhoto from "../../assets/images/PcPhoto.png";
+import Review from "../../Components/Review Component/Review";
 
 const AboutUs = () => {
   return (
@@ -220,6 +221,9 @@ const AboutUs = () => {
             src={PhotoFuturePc}
           />
         </div>
+      </div>
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <Review />
       </div>
     </div>
   );

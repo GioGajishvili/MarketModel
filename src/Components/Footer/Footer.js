@@ -40,7 +40,7 @@ function Footer() {
         linktitle={""}
       />
       <div className="footer-botter-component">
-        <div>
+        <div style={{ display: "flex", flexDirection: "row" }}>
           <a href="https://www.facebook.com" target="_blank">
             <img className="facebook-logo-footer" src={Facebook} />
           </a>

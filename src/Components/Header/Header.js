@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Facebook from "../../assets/Icons/Facebook.png";
 import Instagram from "../../assets/Icons/Instagram.png";
 import LogoForHeader from "../../assets/Icons/LogoForHeader.png";
-import { CiShoppingCart, CiSearch, CiUser } from "react-icons/ci";
+import { CiShoppingCart, CiUser } from "react-icons/ci";
 import { Link, useNavigate } from "react-router-dom";
 
 function Header() {

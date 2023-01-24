@@ -1,4 +1,4 @@
-import { ArrayForLinks } from "./array";
+import { ArrayForLinks } from "./ArrayForLinks";
 import "./LinkComponent.css";
 
 const WrapperComponent = () => {
