@@ -1,9 +1,10 @@
+import GridViewComponent from "../../Components/ViewComponents/GridView";
 import "./HomePage.css";
 
 const HomePage = () => {
   return (
     <div className="home-page">
-      <p className="home-page">Home Page</p>
+      <GridViewComponent />
     </div>
   );
 };
