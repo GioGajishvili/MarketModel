@@ -12,7 +12,7 @@ function Header() {
   const navigate = useNavigate();
 
   return (
-    <div className="header">
+    <div style={{ zIndex: 100 }} className="header">
       <div className="black-line">
         <div className="info-container d-flex align-items-center">
           <p className="worktime">

@@ -6,6 +6,8 @@ import TestProductPhoto4 from "../../assets/images/TestProductPhoto4.png";
 import TestProductPhoto5 from "../../assets/images/TestProductPhoto5.png";
 import { BsCheckCircleFill } from "react-icons/bs";
 import { BsFillStarFill } from "react-icons/bs";
+import { MdArrowBackIosNew, MdArrowForwardIos } from "react-icons/md";
+import TestProductArray from "ProductArray.js";
 
 const GridViewComponent = () => {
   return (
@@ -15,7 +17,27 @@ const GridViewComponent = () => {
           <BsCheckCircleFill color="green" />
           <p style={{ margin: "0px 0px 0px 10px" }}>In Stock</p>
         </div>
-        <img className="product-photo" src={TestProductPhoto} />
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            position: "relative",
+          }}
+        >
+          <img className="product-photo" src={TestProductPhoto} />
+          <button
+            className="product-arrow-icons"
+            style={{ position: "absolute", margin: "60px 0px 0px 20px" }}
+          >
+            <MdArrowBackIosNew />
+          </button>
+          <button
+            className="product-arrow-icons"
+            style={{ position: "absolute", margin: "60px 0px 0px 210px" }}
+          >
+            <MdArrowForwardIos />
+          </button>
+        </div>
         <div className="review-stars">
           <BsFillStarFill color="orange" size={"18px"} />
           <BsFillStarFill color="orange" size={"18px"} />
@@ -30,7 +52,7 @@ const GridViewComponent = () => {
           EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH
         </p>
         <div className="prices-container">
-          <p className="start-price">200$</p>
+          <p className="special-price">200$</p>
           <p style={{ marginLeft: "40px" }} className="discounted-price">
             150$
           </p>
@@ -41,7 +63,27 @@ const GridViewComponent = () => {
           <BsCheckCircleFill color="green" />
           <p style={{ margin: "0px 0px 0px 10px" }}>In Stock</p>
         </div>
-        <img className="product-photo" src={TestProductPhoto2} />
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            position: "relative",
+          }}
+        >
+          <img className="product-photo" src={TestProductPhoto2} />
+          <button
+            className="product-arrow-icons"
+            style={{ position: "absolute", margin: "60px 0px 0px 20px" }}
+          >
+            <MdArrowBackIosNew />
+          </button>
+          <button
+            className="product-arrow-icons"
+            style={{ position: "absolute", margin: "60px 0px 0px 210px" }}
+          >
+            <MdArrowForwardIos />
+          </button>
+        </div>{" "}
         <div className="review-stars">
           <BsFillStarFill color="orange" size={"18px"} />
           <BsFillStarFill color="orange" size={"18px"} />
@@ -56,7 +98,7 @@ const GridViewComponent = () => {
           EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH
         </p>
         <div className="prices-container">
-          <p className="start-price">200$</p>
+          <p className="special-price">200$</p>
           <p style={{ marginLeft: "40px" }} className="discounted-price">
             150$
           </p>
@@ -67,7 +109,27 @@ const GridViewComponent = () => {
           <BsCheckCircleFill color="green" />
           <p style={{ margin: "0px 0px 0px 10px" }}>In Stock</p>
         </div>
-        <img className="product-photo" src={TestProductPhoto3} />
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            position: "relative",
+          }}
+        >
+          <img className="product-photo" src={TestProductPhoto3} />
+          <button
+            className="product-arrow-icons"
+            style={{ position: "absolute", margin: "60px 0px 0px 20px" }}
+          >
+            <MdArrowBackIosNew />
+          </button>
+          <button
+            className="product-arrow-icons"
+            style={{ position: "absolute", margin: "60px 0px 0px 210px" }}
+          >
+            <MdArrowForwardIos />
+          </button>
+        </div>{" "}
         <div className="review-stars">
           <BsFillStarFill color="orange" size={"18px"} />
           <BsFillStarFill color="orange" size={"18px"} />
@@ -82,7 +144,7 @@ const GridViewComponent = () => {
           EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH
         </p>
         <div className="prices-container">
-          <p className="start-price">200$</p>
+          <p className="special-price">200$</p>
           <p style={{ marginLeft: "40px" }} className="discounted-price">
             150$
           </p>
@@ -93,7 +155,27 @@ const GridViewComponent = () => {
           <BsCheckCircleFill color="green" />
           <p style={{ margin: "0px 0px 0px 10px" }}>In Stock</p>
         </div>
-        <img className="product-photo" src={TestProductPhoto4} />
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            position: "relative",
+          }}
+        >
+          <img className="product-photo" src={TestProductPhoto4} />
+          <button
+            className="product-arrow-icons"
+            style={{ position: "absolute", margin: "60px 0px 0px 20px" }}
+          >
+            <MdArrowBackIosNew />
+          </button>
+          <button
+            className="product-arrow-icons"
+            style={{ position: "absolute", margin: "60px 0px 0px 210px" }}
+          >
+            <MdArrowForwardIos />
+          </button>
+        </div>{" "}
         <div className="review-stars">
           <BsFillStarFill color="orange" size={"18px"} />
           <BsFillStarFill color="orange" size={"18px"} />
@@ -108,7 +190,7 @@ const GridViewComponent = () => {
           EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH
         </p>
         <div className="prices-container">
-          <p className="start-price">200$</p>
+          <p className="special-price">200$</p>
           <p style={{ marginLeft: "40px" }} className="discounted-price">
             150$
           </p>
@@ -119,7 +201,27 @@ const GridViewComponent = () => {
           <BsCheckCircleFill color="green" />
           <p style={{ margin: "0px 0px 0px 10px" }}>In Stock</p>
         </div>
-        <img className="product-photo" src={TestProductPhoto5} />
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            position: "relative",
+          }}
+        >
+          <img className="product-photo" src={TestProductPhoto5} />
+          <button
+            className="product-arrow-icons"
+            style={{ position: "absolute", margin: "60px 0px 0px 20px" }}
+          >
+            <MdArrowBackIosNew />
+          </button>
+          <button
+            className="product-arrow-icons"
+            style={{ position: "absolute", margin: "60px 0px 0px 210px" }}
+          >
+            <MdArrowForwardIos />
+          </button>
+        </div>{" "}
         <div className="review-stars">
           <BsFillStarFill color="orange" size={"18px"} />
           <BsFillStarFill color="orange" size={"18px"} />
@@ -134,7 +236,7 @@ const GridViewComponent = () => {
           EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH
         </p>
         <div className="prices-container">
-          <p className="start-price">200$</p>
+          <p className="special-price">200$</p>
           <p style={{ marginLeft: "40px" }} className="discounted-price">
             150$
           </p>
@@ -145,7 +247,27 @@ const GridViewComponent = () => {
           <BsCheckCircleFill color="green" />
           <p style={{ margin: "0px 0px 0px 10px" }}>In Stock</p>
         </div>
-        <img className="product-photo" src={TestProductPhoto} />
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            position: "relative",
+          }}
+        >
+          <img className="product-photo" src={TestProductPhoto} />
+          <button
+            className="product-arrow-icons"
+            style={{ position: "absolute", margin: "60px 0px 0px 20px" }}
+          >
+            <MdArrowBackIosNew />
+          </button>
+          <button
+            className="product-arrow-icons"
+            style={{ position: "absolute", margin: "60px 0px 0px 210px" }}
+          >
+            <MdArrowForwardIos />
+          </button>
+        </div>{" "}
         <div className="review-stars">
           <BsFillStarFill color="orange" size={"18px"} />
           <BsFillStarFill color="orange" size={"18px"} />
@@ -160,7 +282,7 @@ const GridViewComponent = () => {
           EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH
         </p>
         <div className="prices-container">
-          <p className="start-price">200$</p>
+          <p className="special-price">200$</p>
           <p style={{ marginLeft: "40px" }} className="discounted-price">
             150$
           </p>
@@ -171,7 +293,27 @@ const GridViewComponent = () => {
           <BsCheckCircleFill color="green" />
           <p style={{ margin: "0px 0px 0px 10px" }}>In Stock</p>
         </div>
-        <img className="product-photo" src={TestProductPhoto2} />
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            position: "relative",
+          }}
+        >
+          <img className="product-photo" src={TestProductPhoto2} />
+          <button
+            className="product-arrow-icons"
+            style={{ position: "absolute", margin: "60px 0px 0px 20px" }}
+          >
+            <MdArrowBackIosNew />
+          </button>
+          <button
+            className="product-arrow-icons"
+            style={{ position: "absolute", margin: "60px 0px 0px 210px" }}
+          >
+            <MdArrowForwardIos />
+          </button>
+        </div>{" "}
         <div className="review-stars">
           <BsFillStarFill color="orange" size={"18px"} />
           <BsFillStarFill color="orange" size={"18px"} />
@@ -186,7 +328,7 @@ const GridViewComponent = () => {
           EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH
         </p>
         <div className="prices-container">
-          <p className="start-price">200$</p>
+          <p className="special-price">200$</p>
           <p style={{ marginLeft: "40px" }} className="discounted-price">
             150$
           </p>
@@ -197,7 +339,27 @@ const GridViewComponent = () => {
           <BsCheckCircleFill color="green" />
           <p style={{ margin: "0px 0px 0px 10px" }}>In Stock</p>
         </div>
-        <img className="product-photo" src={TestProductPhoto3} />
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            position: "relative",
+          }}
+        >
+          <img className="product-photo" src={TestProductPhoto3} />
+          <button
+            className="product-arrow-icons"
+            style={{ position: "absolute", margin: "60px 0px 0px 20px" }}
+          >
+            <MdArrowBackIosNew />
+          </button>
+          <button
+            className="product-arrow-icons"
+            style={{ position: "absolute", margin: "60px 0px 0px 210px" }}
+          >
+            <MdArrowForwardIos />
+          </button>
+        </div>{" "}
         <div className="review-stars">
           <BsFillStarFill color="orange" size={"18px"} />
           <BsFillStarFill color="orange" size={"18px"} />
@@ -212,7 +374,7 @@ const GridViewComponent = () => {
           EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH
         </p>
         <div className="prices-container">
-          <p className="start-price">200$</p>
+          <p className="special-price">200$</p>
           <p style={{ marginLeft: "40px" }} className="discounted-price">
             150$
           </p>
@@ -223,7 +385,27 @@ const GridViewComponent = () => {
           <BsCheckCircleFill color="green" />
           <p style={{ margin: "0px 0px 0px 10px" }}>In Stock</p>
         </div>
-        <img className="product-photo" src={TestProductPhoto4} />
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            position: "relative",
+          }}
+        >
+          <img className="product-photo" src={TestProductPhoto4} />
+          <button
+            className="product-arrow-icons"
+            style={{ position: "absolute", margin: "60px 0px 0px 20px" }}
+          >
+            <MdArrowBackIosNew />
+          </button>
+          <button
+            className="product-arrow-icons"
+            style={{ position: "absolute", margin: "60px 0px 0px 210px" }}
+          >
+            <MdArrowForwardIos />
+          </button>
+        </div>{" "}
         <div className="review-stars">
           <BsFillStarFill color="orange" size={"18px"} />
           <BsFillStarFill color="orange" size={"18px"} />
@@ -238,7 +420,7 @@ const GridViewComponent = () => {
           EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH
         </p>
         <div className="prices-container">
-          <p className="start-price">200$</p>
+          <p className="special-price">200$</p>
           <p style={{ marginLeft: "40px" }} className="discounted-price">
             150$
           </p>
@@ -249,7 +431,27 @@ const GridViewComponent = () => {
           <BsCheckCircleFill color="green" />
           <p style={{ margin: "0px 0px 0px 10px" }}>In Stock</p>
         </div>
-        <img className="product-photo" src={TestProductPhoto5} />
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            position: "relative",
+          }}
+        >
+          <img className="product-photo" src={TestProductPhoto5} />
+          <button
+            className="product-arrow-icons"
+            style={{ position: "absolute", margin: "60px 0px 0px 20px" }}
+          >
+            <MdArrowBackIosNew />
+          </button>
+          <button
+            className="product-arrow-icons"
+            style={{ position: "absolute", margin: "60px 0px 0px 210px" }}
+          >
+            <MdArrowForwardIos />
+          </button>
+        </div>{" "}
         <div className="review-stars">
           <BsFillStarFill color="orange" size={"18px"} />
           <BsFillStarFill color="orange" size={"18px"} />
@@ -264,7 +466,7 @@ const GridViewComponent = () => {
           EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH
         </p>
         <div className="prices-container">
-          <p className="start-price">200$</p>
+          <p className="special-price">200$</p>
           <p style={{ marginLeft: "40px" }} className="discounted-price">
             150$
           </p>
@@ -275,7 +477,27 @@ const GridViewComponent = () => {
           <BsCheckCircleFill color="green" />
           <p style={{ margin: "0px 0px 0px 10px" }}>In Stock</p>
         </div>
-        <img className="product-photo" src={TestProductPhoto} />
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            position: "relative",
+          }}
+        >
+          <img className="product-photo" src={TestProductPhoto} />
+          <button
+            className="product-arrow-icons"
+            style={{ position: "absolute", margin: "60px 0px 0px 20px" }}
+          >
+            <MdArrowBackIosNew />
+          </button>
+          <button
+            className="product-arrow-icons"
+            style={{ position: "absolute", margin: "60px 0px 0px 210px" }}
+          >
+            <MdArrowForwardIos />
+          </button>
+        </div>{" "}
         <div className="review-stars">
           <BsFillStarFill color="orange" size={"18px"} />
           <BsFillStarFill color="orange" size={"18px"} />
@@ -290,7 +512,7 @@ const GridViewComponent = () => {
           EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH
         </p>
         <div className="prices-container">
-          <p className="start-price">200$</p>
+          <p className="special-price">200$</p>
           <p style={{ marginLeft: "40px" }} className="discounted-price">
             150$
           </p>
@@ -301,7 +523,27 @@ const GridViewComponent = () => {
           <BsCheckCircleFill color="green" />
           <p style={{ margin: "0px 0px 0px 10px" }}>In Stock</p>
         </div>
-        <img className="product-photo" src={TestProductPhoto2} />
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            position: "relative",
+          }}
+        >
+          <img className="product-photo" src={TestProductPhoto2} />
+          <button
+            className="product-arrow-icons"
+            style={{ position: "absolute", margin: "60px 0px 0px 20px" }}
+          >
+            <MdArrowBackIosNew />
+          </button>
+          <button
+            className="product-arrow-icons"
+            style={{ position: "absolute", margin: "60px 0px 0px 210px" }}
+          >
+            <MdArrowForwardIos />
+          </button>
+        </div>{" "}
         <div className="review-stars">
           <BsFillStarFill color="orange" size={"18px"} />
           <BsFillStarFill color="orange" size={"18px"} />
@@ -316,7 +558,7 @@ const GridViewComponent = () => {
           EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH
         </p>
         <div className="prices-container">
-          <p className="start-price">200$</p>
+          <p className="special-price">200$</p>
           <p style={{ marginLeft: "40px" }} className="discounted-price">
             150$
           </p>
