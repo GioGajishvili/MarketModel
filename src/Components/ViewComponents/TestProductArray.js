@@ -1,4 +1,4 @@
-const TestProductArray = [
+export const TestProductArray = [
   {
     id: 1,
     stock: true,

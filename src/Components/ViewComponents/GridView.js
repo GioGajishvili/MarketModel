@@ -7,7 +7,7 @@ import TestProductPhoto5 from "../../assets/images/TestProductPhoto5.png";
 import { BsCheckCircleFill } from "react-icons/bs";
 import { BsFillStarFill } from "react-icons/bs";
 import { MdArrowBackIosNew, MdArrowForwardIos } from "react-icons/md";
-import TestProductArray from "ProductArray.js";
+import { TestProductArray } from "./TestProductArray";
 
 const GridViewComponent = () => {
   return (
