@@ -12,7 +12,7 @@ const Auth = () => {
           justifyContent: "flex-start",
         }}
       >
-        <h1 className="login-title">Customer Login</h1>
+        <h1 className="login-title"> Customer Login </h1>
       </div>
       <div style={{ flexDirection: "row", display: "flex", gap: "100px" }}>
         <div className="login-block">

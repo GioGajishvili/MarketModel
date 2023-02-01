@@ -10,8 +10,6 @@
 
 .form-login {
   display: flex;
-  align-items: left;
-  justify-content: space-evenly;
   flex-direction: column;
   font-family: Jura;
   font-style: normal;
