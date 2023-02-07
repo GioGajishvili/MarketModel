@@ -1,568 +1,96 @@
 import "./GridView.css";
-import TestProductPhoto from "../../assets/images/TestProductPhoto.png";
-import TestProductPhoto2 from "../../assets/images/TestProductPhoto2.png";
-import TestProductPhoto3 from "../../assets/images/TestProductPhoto3.png";
-import TestProductPhoto4 from "../../assets/images/TestProductPhoto4.png";
-import TestProductPhoto5 from "../../assets/images/TestProductPhoto5.png";
-import { BsCheckCircleFill } from "react-icons/bs";
-import { BsFillStarFill } from "react-icons/bs";
-import { MdArrowBackIosNew, MdArrowForwardIos } from "react-icons/md";
-import { TestProductArray } from "./TestProductArray";
+import { testProductArray } from "./TestProductArray";
+import ProductModel from "./ProductModel";
+import { Link } from "react-router-dom";
+import { useState } from "react";
+import { MdArrowBackIosNew } from "react-icons/md";
 
 const GridViewComponent = () => {
+  const [product, setProduct] = useState(testProductArray);
+  const [toggleCategory, setToggleCategory] = useState(false);
+  const [togglePrice, setTogglePrice] = useState(false);
+
+  const toggleButton = () => {
+    setToggleCategory(!toggleCategory);
+  };
+
   return (
-    <div className="container-grid-view">
-      <div className="grid-view-product">
-        <div className="stock-indicator">
-          <BsCheckCircleFill color="green" />
-          <p style={{ margin: "0px 0px 0px 10px" }}>In Stock</p>
+    <div className="grid-view-filter-container">
+      <div className="leftside-filter">
+        <div>
+          <h1 style={{ fontSize: "28px", marginTop: "20px" }}>Filters</h1>
+          <button className="clear-filters-button">Clear Filters</button>
         </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            position: "relative",
-          }}
-        >
-          <img className="product-photo" src={TestProductPhoto} />
+        <div>
           <button
-            className="product-arrow-icons"
-            style={{ position: "absolute", margin: "60px 0px 0px 20px" }}
+            className="filter-category-button"
+            onClick={() => toggleButton()}
           >
-            <MdArrowBackIosNew />
-          </button>
-          <button
-            className="product-arrow-icons"
-            style={{ position: "absolute", margin: "60px 0px 0px 210px" }}
-          >
-            <MdArrowForwardIos />
+            Category
+            <MdArrowBackIosNew
+              style={{ margin: "0px 0px 1px 16" }}
+              size="12px"
+            />
           </button>
         </div>
-        <div className="review-stars">
-          <BsFillStarFill color="orange" size={"18px"} />
-          <BsFillStarFill color="orange" size={"18px"} />
-          <BsFillStarFill color="orange" size={"18px"} />
-          <BsFillStarFill color="orange" size={"18px"} />
-          <BsFillStarFill size={"18px"} />
-          <p style={{ margin: "0px 0px 2px 12px", color: "grey" }}>
-            (4 reviews)
-          </p>
+        {toggleCategory && (
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              marginTop: "8px",
+            }}
+          >
+            <Link className="filter-links">Desktop Pcs</Link>
+            <Link className="filter-links">Laptops</Link>
+            <Link className="filter-links">Pc Parts</Link>
+          </div>
+        )}
+        <div>
+          <button
+            className="filter-price-button"
+            onClick={() => setTogglePrice(!togglePrice)}
+          >
+            Price
+            <MdArrowBackIosNew
+              style={{ margin: "0px 0px 1px 16" }}
+              size="12px"
+            />
+          </button>
         </div>
-        <p className="product-describe">
-          EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH
-        </p>
-        <div className="prices-container">
-          <p className="special-price">200$</p>
-          <p style={{ marginLeft: "40px" }} className="discounted-price">
-            150$
-          </p>
-        </div>
+        {togglePrice && (
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              marginTop: "8px",
+            }}
+          >
+            <Link className="filter-links">$0.00 - $100</Link>
+            <Link className="filter-links">$100 - $200</Link>
+            <Link className="filter-links">$200 - $400</Link>
+            <Link className="filter-links">$400 - $600</Link>
+            <Link className="filter-links">$600 - $1,000</Link>
+            <Link className="filter-links">$1000 - $1000+</Link>
+          </div>
+        )}
       </div>
-      <div className="grid-view-product">
-        <div className="stock-indicator">
-          <BsCheckCircleFill color="green" />
-          <p style={{ margin: "0px 0px 0px 10px" }}>In Stock</p>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            position: "relative",
-          }}
-        >
-          <img className="product-photo" src={TestProductPhoto2} />
-          <button
-            className="product-arrow-icons"
-            style={{ position: "absolute", margin: "60px 0px 0px 20px" }}
-          >
-            <MdArrowBackIosNew />
-          </button>
-          <button
-            className="product-arrow-icons"
-            style={{ position: "absolute", margin: "60px 0px 0px 210px" }}
-          >
-            <MdArrowForwardIos />
-          </button>
-        </div>{" "}
-        <div className="review-stars">
-          <BsFillStarFill color="orange" size={"18px"} />
-          <BsFillStarFill color="orange" size={"18px"} />
-          <BsFillStarFill color="orange" size={"18px"} />
-          <BsFillStarFill color="orange" size={"18px"} />
-          <BsFillStarFill size={"18px"} />
-          <p style={{ margin: "0px 0px 2px 12px", color: "grey" }}>
-            (4 reviews)
-          </p>
-        </div>
-        <p className="product-describe">
-          EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH
-        </p>
-        <div className="prices-container">
-          <p className="special-price">200$</p>
-          <p style={{ marginLeft: "40px" }} className="discounted-price">
-            150$
-          </p>
-        </div>
-      </div>
-      <div className="grid-view-product">
-        <div className="stock-indicator">
-          <BsCheckCircleFill color="green" />
-          <p style={{ margin: "0px 0px 0px 10px" }}>In Stock</p>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            position: "relative",
-          }}
-        >
-          <img className="product-photo" src={TestProductPhoto3} />
-          <button
-            className="product-arrow-icons"
-            style={{ position: "absolute", margin: "60px 0px 0px 20px" }}
-          >
-            <MdArrowBackIosNew />
-          </button>
-          <button
-            className="product-arrow-icons"
-            style={{ position: "absolute", margin: "60px 0px 0px 210px" }}
-          >
-            <MdArrowForwardIos />
-          </button>
-        </div>{" "}
-        <div className="review-stars">
-          <BsFillStarFill color="orange" size={"18px"} />
-          <BsFillStarFill color="orange" size={"18px"} />
-          <BsFillStarFill color="orange" size={"18px"} />
-          <BsFillStarFill color="orange" size={"18px"} />
-          <BsFillStarFill size={"18px"} />
-          <p style={{ margin: "0px 0px 2px 12px", color: "grey" }}>
-            (4 reviews)
-          </p>
-        </div>
-        <p className="product-describe">
-          EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH
-        </p>
-        <div className="prices-container">
-          <p className="special-price">200$</p>
-          <p style={{ marginLeft: "40px" }} className="discounted-price">
-            150$
-          </p>
-        </div>
-      </div>
-      <div className="grid-view-product">
-        <div className="stock-indicator">
-          <BsCheckCircleFill color="green" />
-          <p style={{ margin: "0px 0px 0px 10px" }}>In Stock</p>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            position: "relative",
-          }}
-        >
-          <img className="product-photo" src={TestProductPhoto4} />
-          <button
-            className="product-arrow-icons"
-            style={{ position: "absolute", margin: "60px 0px 0px 20px" }}
-          >
-            <MdArrowBackIosNew />
-          </button>
-          <button
-            className="product-arrow-icons"
-            style={{ position: "absolute", margin: "60px 0px 0px 210px" }}
-          >
-            <MdArrowForwardIos />
-          </button>
-        </div>{" "}
-        <div className="review-stars">
-          <BsFillStarFill color="orange" size={"18px"} />
-          <BsFillStarFill color="orange" size={"18px"} />
-          <BsFillStarFill color="orange" size={"18px"} />
-          <BsFillStarFill color="orange" size={"18px"} />
-          <BsFillStarFill size={"18px"} />
-          <p style={{ margin: "0px 0px 2px 12px", color: "grey" }}>
-            (4 reviews)
-          </p>
-        </div>
-        <p className="product-describe">
-          EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH
-        </p>
-        <div className="prices-container">
-          <p className="special-price">200$</p>
-          <p style={{ marginLeft: "40px" }} className="discounted-price">
-            150$
-          </p>
-        </div>
-      </div>
-      <div className="grid-view-product">
-        <div className="stock-indicator">
-          <BsCheckCircleFill color="green" />
-          <p style={{ margin: "0px 0px 0px 10px" }}>In Stock</p>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            position: "relative",
-          }}
-        >
-          <img className="product-photo" src={TestProductPhoto5} />
-          <button
-            className="product-arrow-icons"
-            style={{ position: "absolute", margin: "60px 0px 0px 20px" }}
-          >
-            <MdArrowBackIosNew />
-          </button>
-          <button
-            className="product-arrow-icons"
-            style={{ position: "absolute", margin: "60px 0px 0px 210px" }}
-          >
-            <MdArrowForwardIos />
-          </button>
-        </div>{" "}
-        <div className="review-stars">
-          <BsFillStarFill color="orange" size={"18px"} />
-          <BsFillStarFill color="orange" size={"18px"} />
-          <BsFillStarFill color="orange" size={"18px"} />
-          <BsFillStarFill color="orange" size={"18px"} />
-          <BsFillStarFill size={"18px"} />
-          <p style={{ margin: "0px 0px 2px 12px", color: "grey" }}>
-            (4 reviews)
-          </p>
-        </div>
-        <p className="product-describe">
-          EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH
-        </p>
-        <div className="prices-container">
-          <p className="special-price">200$</p>
-          <p style={{ marginLeft: "40px" }} className="discounted-price">
-            150$
-          </p>
-        </div>
-      </div>
-      <div className="grid-view-product">
-        <div className="stock-indicator">
-          <BsCheckCircleFill color="green" />
-          <p style={{ margin: "0px 0px 0px 10px" }}>In Stock</p>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            position: "relative",
-          }}
-        >
-          <img className="product-photo" src={TestProductPhoto} />
-          <button
-            className="product-arrow-icons"
-            style={{ position: "absolute", margin: "60px 0px 0px 20px" }}
-          >
-            <MdArrowBackIosNew />
-          </button>
-          <button
-            className="product-arrow-icons"
-            style={{ position: "absolute", margin: "60px 0px 0px 210px" }}
-          >
-            <MdArrowForwardIos />
-          </button>
-        </div>{" "}
-        <div className="review-stars">
-          <BsFillStarFill color="orange" size={"18px"} />
-          <BsFillStarFill color="orange" size={"18px"} />
-          <BsFillStarFill color="orange" size={"18px"} />
-          <BsFillStarFill color="orange" size={"18px"} />
-          <BsFillStarFill size={"18px"} />
-          <p style={{ margin: "0px 0px 2px 12px", color: "grey" }}>
-            (4 reviews)
-          </p>
-        </div>
-        <p className="product-describe">
-          EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH
-        </p>
-        <div className="prices-container">
-          <p className="special-price">200$</p>
-          <p style={{ marginLeft: "40px" }} className="discounted-price">
-            150$
-          </p>
-        </div>
-      </div>
-      <div className="grid-view-product">
-        <div className="stock-indicator">
-          <BsCheckCircleFill color="green" />
-          <p style={{ margin: "0px 0px 0px 10px" }}>In Stock</p>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            position: "relative",
-          }}
-        >
-          <img className="product-photo" src={TestProductPhoto2} />
-          <button
-            className="product-arrow-icons"
-            style={{ position: "absolute", margin: "60px 0px 0px 20px" }}
-          >
-            <MdArrowBackIosNew />
-          </button>
-          <button
-            className="product-arrow-icons"
-            style={{ position: "absolute", margin: "60px 0px 0px 210px" }}
-          >
-            <MdArrowForwardIos />
-          </button>
-        </div>{" "}
-        <div className="review-stars">
-          <BsFillStarFill color="orange" size={"18px"} />
-          <BsFillStarFill color="orange" size={"18px"} />
-          <BsFillStarFill color="orange" size={"18px"} />
-          <BsFillStarFill color="orange" size={"18px"} />
-          <BsFillStarFill size={"18px"} />
-          <p style={{ margin: "0px 0px 2px 12px", color: "grey" }}>
-            (4 reviews)
-          </p>
-        </div>
-        <p className="product-describe">
-          EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH
-        </p>
-        <div className="prices-container">
-          <p className="special-price">200$</p>
-          <p style={{ marginLeft: "40px" }} className="discounted-price">
-            150$
-          </p>
-        </div>
-      </div>
-      <div className="grid-view-product">
-        <div className="stock-indicator">
-          <BsCheckCircleFill color="green" />
-          <p style={{ margin: "0px 0px 0px 10px" }}>In Stock</p>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            position: "relative",
-          }}
-        >
-          <img className="product-photo" src={TestProductPhoto3} />
-          <button
-            className="product-arrow-icons"
-            style={{ position: "absolute", margin: "60px 0px 0px 20px" }}
-          >
-            <MdArrowBackIosNew />
-          </button>
-          <button
-            className="product-arrow-icons"
-            style={{ position: "absolute", margin: "60px 0px 0px 210px" }}
-          >
-            <MdArrowForwardIos />
-          </button>
-        </div>{" "}
-        <div className="review-stars">
-          <BsFillStarFill color="orange" size={"18px"} />
-          <BsFillStarFill color="orange" size={"18px"} />
-          <BsFillStarFill color="orange" size={"18px"} />
-          <BsFillStarFill color="orange" size={"18px"} />
-          <BsFillStarFill size={"18px"} />
-          <p style={{ margin: "0px 0px 2px 12px", color: "grey" }}>
-            (4 reviews)
-          </p>
-        </div>
-        <p className="product-describe">
-          EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH
-        </p>
-        <div className="prices-container">
-          <p className="special-price">200$</p>
-          <p style={{ marginLeft: "40px" }} className="discounted-price">
-            150$
-          </p>
-        </div>
-      </div>
-      <div className="grid-view-product">
-        <div className="stock-indicator">
-          <BsCheckCircleFill color="green" />
-          <p style={{ margin: "0px 0px 0px 10px" }}>In Stock</p>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            position: "relative",
-          }}
-        >
-          <img className="product-photo" src={TestProductPhoto4} />
-          <button
-            className="product-arrow-icons"
-            style={{ position: "absolute", margin: "60px 0px 0px 20px" }}
-          >
-            <MdArrowBackIosNew />
-          </button>
-          <button
-            className="product-arrow-icons"
-            style={{ position: "absolute", margin: "60px 0px 0px 210px" }}
-          >
-            <MdArrowForwardIos />
-          </button>
-        </div>{" "}
-        <div className="review-stars">
-          <BsFillStarFill color="orange" size={"18px"} />
-          <BsFillStarFill color="orange" size={"18px"} />
-          <BsFillStarFill color="orange" size={"18px"} />
-          <BsFillStarFill color="orange" size={"18px"} />
-          <BsFillStarFill size={"18px"} />
-          <p style={{ margin: "0px 0px 2px 12px", color: "grey" }}>
-            (4 reviews)
-          </p>
-        </div>
-        <p className="product-describe">
-          EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH
-        </p>
-        <div className="prices-container">
-          <p className="special-price">200$</p>
-          <p style={{ marginLeft: "40px" }} className="discounted-price">
-            150$
-          </p>
-        </div>
-      </div>
-      <div className="grid-view-product">
-        <div className="stock-indicator">
-          <BsCheckCircleFill color="green" />
-          <p style={{ margin: "0px 0px 0px 10px" }}>In Stock</p>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            position: "relative",
-          }}
-        >
-          <img className="product-photo" src={TestProductPhoto5} />
-          <button
-            className="product-arrow-icons"
-            style={{ position: "absolute", margin: "60px 0px 0px 20px" }}
-          >
-            <MdArrowBackIosNew />
-          </button>
-          <button
-            className="product-arrow-icons"
-            style={{ position: "absolute", margin: "60px 0px 0px 210px" }}
-          >
-            <MdArrowForwardIos />
-          </button>
-        </div>{" "}
-        <div className="review-stars">
-          <BsFillStarFill color="orange" size={"18px"} />
-          <BsFillStarFill color="orange" size={"18px"} />
-          <BsFillStarFill color="orange" size={"18px"} />
-          <BsFillStarFill color="orange" size={"18px"} />
-          <BsFillStarFill size={"18px"} />
-          <p style={{ margin: "0px 0px 2px 12px", color: "grey" }}>
-            (4 reviews)
-          </p>
-        </div>
-        <p className="product-describe">
-          EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH
-        </p>
-        <div className="prices-container">
-          <p className="special-price">200$</p>
-          <p style={{ marginLeft: "40px" }} className="discounted-price">
-            150$
-          </p>
-        </div>
-      </div>
-      <div className="grid-view-product">
-        <div className="stock-indicator">
-          <BsCheckCircleFill color="green" />
-          <p style={{ margin: "0px 0px 0px 10px" }}>In Stock</p>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            position: "relative",
-          }}
-        >
-          <img className="product-photo" src={TestProductPhoto} />
-          <button
-            className="product-arrow-icons"
-            style={{ position: "absolute", margin: "60px 0px 0px 20px" }}
-          >
-            <MdArrowBackIosNew />
-          </button>
-          <button
-            className="product-arrow-icons"
-            style={{ position: "absolute", margin: "60px 0px 0px 210px" }}
-          >
-            <MdArrowForwardIos />
-          </button>
-        </div>{" "}
-        <div className="review-stars">
-          <BsFillStarFill color="orange" size={"18px"} />
-          <BsFillStarFill color="orange" size={"18px"} />
-          <BsFillStarFill color="orange" size={"18px"} />
-          <BsFillStarFill color="orange" size={"18px"} />
-          <BsFillStarFill size={"18px"} />
-          <p style={{ margin: "0px 0px 2px 12px", color: "grey" }}>
-            (4 reviews)
-          </p>
-        </div>
-        <p className="product-describe">
-          EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH
-        </p>
-        <div className="prices-container">
-          <p className="special-price">200$</p>
-          <p style={{ marginLeft: "40px" }} className="discounted-price">
-            150$
-          </p>
-        </div>
-      </div>
-      <div className="grid-view-product">
-        <div className="stock-indicator">
-          <BsCheckCircleFill color="green" />
-          <p style={{ margin: "0px 0px 0px 10px" }}>In Stock</p>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            position: "relative",
-          }}
-        >
-          <img className="product-photo" src={TestProductPhoto2} />
-          <button
-            className="product-arrow-icons"
-            style={{ position: "absolute", margin: "60px 0px 0px 20px" }}
-          >
-            <MdArrowBackIosNew />
-          </button>
-          <button
-            className="product-arrow-icons"
-            style={{ position: "absolute", margin: "60px 0px 0px 210px" }}
-          >
-            <MdArrowForwardIos />
-          </button>
-        </div>{" "}
-        <div className="review-stars">
-          <BsFillStarFill color="orange" size={"18px"} />
-          <BsFillStarFill color="orange" size={"18px"} />
-          <BsFillStarFill color="orange" size={"18px"} />
-          <BsFillStarFill color="orange" size={"18px"} />
-          <BsFillStarFill size={"18px"} />
-          <p style={{ margin: "0px 0px 2px 12px", color: "grey" }}>
-            (4 reviews)
-          </p>
-        </div>
-        <p className="product-describe">
-          EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH
-        </p>
-        <div className="prices-container">
-          <p className="special-price">200$</p>
-          <p style={{ marginLeft: "40px" }} className="discounted-price">
-            150$
-          </p>
-        </div>
+      <div className="container-grid-view">
+        {product.map((item) => (
+          <ProductModel
+            key={item.id}
+            id={item.id}
+            inStock={item.inStock}
+            stockColor={item.stockColor}
+            stockIndicator={item.stockIndicator}
+            photo={item.photo}
+            colorfulStarsCount={item.colorfulStarCount}
+            reviewCount={item.reviewCount}
+            description={item.description}
+            specialPrice={item.specialPrice}
+            discountedPrice={item.discountedPrice}
+          />
+        ))}
       </div>
     </div>
   );
