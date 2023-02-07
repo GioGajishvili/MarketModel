@@ -1,11 +1,6 @@
 import "./AboutUs.css";
 import { BiChevronRight } from "react-icons/bi";
 import { Link } from "react-router-dom";
-import PhotoOffice from "../../assets/images/PhotoOffice.png";
-import PhotoKeyword from "../../assets/images/Keyword.png";
-import PhotoWhitePc from "../../assets/images/WhitePc.png";
-import PhotoFuturePc from "../../assets/images/FuturePc.png";
-import PhotoPcPhoto from "../../assets/images/PcPhoto.png";
 import Review from "../../Components/Review Component/Review";
 
 const AboutUs = () => {
@@ -67,7 +62,7 @@ const AboutUs = () => {
                 borderRadius: "50px",
                 marginRight: "50px",
               }}
-              src={PhotoOffice}
+              src="/assets/images/PhotoOffice.png"
             />
           </div>
         </div>
@@ -85,7 +80,7 @@ const AboutUs = () => {
                   marginTop: "50px",
                   borderRadius: "50px",
                 }}
-                src={PhotoKeyword}
+                src="/assets/images/Keybord.png"
               />
             </div>
             <div style={{ marginLeft: "50px" }}>
@@ -140,7 +135,7 @@ const AboutUs = () => {
                 borderRadius: "50px",
                 marginRight: "10px",
               }}
-              src={PhotoPcPhoto}
+              src="/assets/images/PcPhoto.png"
             />
           </div>
         </div>
@@ -159,7 +154,7 @@ const AboutUs = () => {
                   marginRight: "50px",
                   borderRadius: "50px",
                 }}
-                src={PhotoWhitePc}
+                src="/assets/images/WhitePc.png"
               />
             </div>
             <div>
@@ -218,7 +213,7 @@ const AboutUs = () => {
               borderRadius: "50px",
               marginRight: "50px",
             }}
-            src={PhotoFuturePc}
+            src="/assets/images/FuturePc.png"
           />
         </div>
       </div>

@@ -2,10 +2,10 @@ import "./Footer.css";
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { TbHeadset, TbUser, TbDiscount } from "react-icons/tb";
+import { FaFacebookSquare } from "react-icons/fa";
+import { FiInstagram } from "react-icons/fi";
 import TopFooterComponent from "./TopFooterComponent";
 import EmailFooterComponent from "./EmailFooterComponent";
-import Facebook from "../../assets/Icons/FacebookFooter.png";
-import Instagram from "../../assets/Icons/InstagramFooter.png";
 
 function Footer() {
   return (
@@ -42,10 +42,10 @@ function Footer() {
       <div className="footer-botter-component">
         <div style={{ display: "flex", flexDirection: "row" }}>
           <a href="https://www.facebook.com" target="_blank">
-            <img className="facebook-logo-footer" src={Facebook} />
+            <FaFacebookSquare className="facebook-logo-footer" />
           </a>
           <a href="https://www.instagram.com" target="_blank">
-            <img className="instagram-logo-footer" src={Instagram} />
+            <FiInstagram className="instagram-logo-footer" />
           </a>
         </div>
         <div

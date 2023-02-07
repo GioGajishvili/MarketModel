@@ -1,6 +1,5 @@
 import "./Review.css";
 import { VscCircleFilled } from "react-icons/vsc";
-import ReviewIcon from "../../assets/images/ReviewIcon.png";
 import { ArrayForReviews } from "./ArrayforReviews";
 import { useState } from "react";
 
@@ -21,7 +20,7 @@ const Review = () => {
         <div>
           <img
             style={{ marginLeft: "100px", marginTop: "60px" }}
-            src={ReviewIcon}
+            src="/assets/images/ReviewIcon.png"
           />
         </div>
         <div className="review-text-container">
