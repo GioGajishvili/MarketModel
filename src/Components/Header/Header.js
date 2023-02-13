@@ -19,8 +19,7 @@ function Header() {
             Mon-Fri: <mark className="work-hours">9:00 AM - 5:30 PM</mark>
           </p>
           <p className="address">
-            Visit our showroom in 1234 Street Adress City Address, 1234 Contact
-            Us
+            Visit our showroom in Tbilisi, Chavchavadze N36, Contact Us
           </p>
           <p className="contact">Call Us: (995) 551 37 07 37 </p>
           <a href="https://www.facebook.com" target="_blank">
@@ -32,7 +31,10 @@ function Header() {
         </div>
       </div>
       <div className="routing-container">
-        <div className="main-header d-flex align-items-center" style={{ marginLeft: "2%" }}>
+        <div
+          className="main-header d-flex align-items-center"
+          style={{ marginLeft: "2%" }}
+        >
           <img className="logo-for-header" src={Logo} />
           <Link to="/" className="header-filters" id="first-filter">
             Home
